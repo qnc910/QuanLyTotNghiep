@@ -31,6 +31,9 @@
     .add a {
         font-family: Arial, Helvetica, sans-serif;
     }
+    tr:hover {
+        background-color:rgb(37, 106, 92); /* Màu nền khi hover */
+    }
 </style>
 
 <body>
@@ -39,10 +42,10 @@
             <label style="color: yellow">Mã bằng</label>
             <input style="width: 250px;" type="text" class="form-control" name="txtMabang" value="<?php if(isset($data['Mabang'])) echo $data['Mabang'] ?>">
             <label style="color: yellow">Mã sinh viên</label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtMasinhvientxtMasinhvien" value="<?php if(isset($data['Masinhvien'])) echo $data['Masinhvien'] ?>">
+            <input style="width: 250px;" type="text" class="form-control" name="txtMasinhvien" value="<?php if(isset($data['Masinhvien'])) echo $data['Masinhvien'] ?>">
             <label style="color: yellow">Ngành học</label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtNganhhoctxtNganhhoc" value="<?php if(isset($data['Nganhhoc'])) echo $data['Nganhhoc'] ?>">
-            <button type="submit" class="btn btn-success" name="btnTimkiem">Tìm kiếm</button>
+            <input style="width: 250px;" type="text" class="form-control" name="txtNganhhoc" value="<?php if(isset($data['Nganhhoc'])) echo $data['Nganhhoc'] ?>">
+            <button type="submit" class="btn btn-success" name="btnTimkiem"><i class="fas fa-search search-icon"></i>Tìm kiếm</button>
         </div>
         <br>
         <table class="table-header" style="overflow:auto;">

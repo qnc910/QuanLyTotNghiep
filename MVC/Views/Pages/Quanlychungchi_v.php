@@ -32,29 +32,32 @@
         font-family: Arial, Helvetica, sans-serif;
     }
     .button {
-            display: inline-block; /* Để nút có thể tự động điều chỉnh chiều dài */
-            padding: 10px 20px;   /* Khoảng cách bên trong */
-            font-size: 16px;      /* Kích thước chữ */
-            color: white;         /* Màu chữ */
-            background-color: #007BFF; /* Màu nền */
-            text-decoration: none; /* Bỏ dấu gạch chân */
-            border-radius: 5px;   /* Bo góc */
-            transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+        display: inline-block; /* Để nút có thể tự động điều chỉnh chiều dài */
+        padding: 10px 20px;   /* Khoảng cách bên trong */
+        font-size: 16px;      /* Kích thước chữ */
+        color: white;         /* Màu chữ */
+        background-color: #007BFF; /* Màu nền */
+        text-decoration: none; /* Bỏ dấu gạch chân */
+        border-radius: 5px;   /* Bo góc */
+        transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
         }
 
-        .button:hover {
-            background-color: #0056b3; /* Màu nền khi di chuột qua */
-        }
+    .button:hover {
+        background-color: #0056b3; /* Màu nền khi di chuột qua */
+    }
+    tr:hover {
+        background-color:rgb(37, 106, 92); /* Màu nền khi hover */
+    }
 </style>
 
 <body>
     <form method="post" action="http://localhost/Quanlytotnghiep/quanlychungchi/timkiem">
         <div class="form-inline">
             <label style="color: yellow">Mã chứng chỉ</label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtMabang" value="<?php if(isset($data['Mabang'])) echo $data['Mabang'] ?>">
+            <input style="width: 250px;" type="text" class="form-control" name="txtMachungchi" value="<?php if(isset($data['Machungchi'])) echo $data['Mabang'] ?>">
             <label style="color: yellow">Tên chứng chỉ</label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtMasinhvientxtMasinhvien" value="<?php if(isset($data['Masinhvien'])) echo $data['Masinhvien'] ?>">
-            <button type="submit" class="btn btn-success" name="btnTimkiem">Tìm kiếm</button>
+            <input style="width: 250px;" type="text" class="form-control" name="txtTenchungchi" value="<?php if(isset($data['Tenchungchi'])) echo $data['Masinhvien'] ?>">
+            <button type="submit" class="btn btn-success" name="btnTimkiem"><i class="fas fa-search search-icon"></i>Tìm kiếm</button>
         </div>
         <br>
         <a href="http://localhost/Quanlytotnghiep/quanlychungchi/themmoi" class="button">Thêm</a>
