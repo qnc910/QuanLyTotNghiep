@@ -18,6 +18,11 @@
 </head>
 
 <style>
+    .mid{
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
     .add {
         padding: 5px 10px;
         border: 3px solid transparent;
@@ -51,14 +56,15 @@
 </style>
 
 <body>
-    <form method="post" action="http://localhost/Quanlytotnghiep/quanlytaikhoantaikhoan/timkiem">
-        <div class="form-inline">
-            <label style="color: yellow">Tên đăng nhập</label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtTendangnhap" value="<?php if(isset($data['Tendangnhap'])) echo $data['Masinhvien'] ?>">
+    <h1 style="color: yellow; text-align: center;">Quản lý tài khoản</h1>
+    <form method="post" action="http://localhost/Quanlytotnghiep/quanlytaikhoan/timkiem">
+        <div class="form-inline mid">
+            <label style="color: yellow">Tên đăng nhập: </label>
+            <input style="width: 250px;" type="text" class="form-control" name="txtTendangnhap" value="<?php if(isset($data['Tendangnhap'])) echo $data['Masinhvien'] ?>"> &nbsp;
             <button type="submit" class="btn btn-success" name="btnTimkiem"><i class="fas fa-search search-icon"></i>Tìm kiếm</button>
         </div>
         <br>
-        <a href="http://localhost/Quanlytotnghiep/quanlychungchi/themmoi" class="button">Thêm</a>
+        <a href="http://localhost/Quanlytotnghiep/taikhoan" class="button">Thêm</a>
         <br>
         <table class="table-header" style="overflow:auto;">
             <thead>
@@ -66,7 +72,10 @@
                     <th style="color: white">STT</th>
                     <th style="color: white">Tên đăng nhập</th>
                     <th style="color: white">Mật khẩu</th>
-                    <th style="color: white">Trạng thái</th>
+                    <th style="color: white">Vai trò</th>
+                    <th style="color: white">Email</th>
+                    <th style="color: white">Số điện thoại</th>
+                    <th style="color: white">Địa chỉ</th>
                 </tr>
             </thead>
             <tbody>

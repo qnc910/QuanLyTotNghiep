@@ -18,6 +18,11 @@
 </head>
 
 <style>
+    .mid{
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
     .add {
         padding: 5px 10px;
         border: 3px solid transparent;
@@ -51,12 +56,13 @@
 </style>
 
 <body>
+    <h1 style="color: yellow; text-align: center;">Quản lý chứng chỉ</h1>
     <form method="post" action="http://localhost/Quanlytotnghiep/quanlychungchi/timkiem">
-        <div class="form-inline">
-            <label style="color: yellow">Mã chứng chỉ</label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtMachungchi" value="<?php if(isset($data['Machungchi'])) echo $data['Mabang'] ?>">
-            <label style="color: yellow">Tên chứng chỉ</label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtTenchungchi" value="<?php if(isset($data['Tenchungchi'])) echo $data['Masinhvien'] ?>">
+        <div class="form-inline mid">
+            <label style="color: yellow; margin-right: 5px;">Mã chứng chỉ: </label>
+            <input style="width: 250px;" type="text" class="form-control" name="txtMachungchi" value="<?php if(isset($data['Machungchi'])) echo $data['Mabang'] ?>"> </br>
+            <label style="color: yellow">Tên chứng chỉ: </label>
+            <input style="width: 250px;" type="text" class="form-control" name="txtTenchungchi" value="<?php if(isset($data['Tenchungchi'])) echo $data['Masinhvien'] ?>"> &nbsp;
             <button type="submit" class="btn btn-success" name="btnTimkiem"><i class="fas fa-search search-icon"></i>Tìm kiếm</button>
         </div>
         <br>
