@@ -60,7 +60,7 @@
     <form method="post" action="http://localhost/Quanlytotnghiep/quanlytaikhoan/timkiem">
         <div class="form-inline mid">
             <label style="color: yellow">Tên đăng nhập: </label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtTendangnhap" value="<?php if(isset($data['Tendangnhap'])) echo $data['Masinhvien'] ?>"> &nbsp;
+            <input style="width: 250px;" type="text" class="form-control" name="txtTendangnhap" value="<?php if(isset($data['tentk'])) echo $data['tentk'] ?>"> &nbsp;
             <button type="submit" class="btn btn-success" name="btnTimkiem"><i class="fas fa-search search-icon"></i>Tìm kiếm</button>
         </div>
         <br>
@@ -79,55 +79,28 @@
                 </tr>
             </thead>
             <tbody>
-               <!-- <?php
+               <?php
                 if(isset($data['dulieu'])&&mysqli_num_rows($data['dulieu'])>0){
                     $i=0;
                     while($row = mysqli_fetch_assoc($data['dulieu'])){
                 ?>
                     <tr style="width: auto;">
                         <td><?php echo ++$i ?></td>
-                        <td><?php echo $row['Tendangnhap'] ?></td>
-                        <td><?php echo $row['Matkhau'] ?></td>
-                        <td><?php echo $row['Trangthai'] ?></td>
+                        <td><?php echo $row['tenTK'] ?></td>
+                        <td><?php echo $row['matKhau'] ?></td>
+                        <td><?php echo $row['vaiTro'] ?></td>
+                        <td><?php echo $row['email'] ?></td>
+                        <td><?php echo $row['sdt'] ?></td>
+                        <td><?php echo $row['diaChi'] ?></td>
                         <td>
-                            <a href="http://localhost/Quanlytotnghiep/quanlytaikhoan/sua/<?php echo $row['Tendangnhap'] ?>"><img src="" alt="">✏️</a>
-                            <a href="http://localhost/73dctt23_MVC/quanlytaikhoan/xoa/<?php echo $row['Tendangnhap'] ?>"><img src="" alt="">❌</a>
+                            <a href="http://localhost/Quanlytotnghiep/quanlytaikhoan/sua/<?php echo $row['tenTK'] ?>"><img src="" alt="">✏️</a>
+                            <a href="http://localhost/73dctt23_MVC/quanlytaikhoan/xoa/<?php echo $row['tenTK'] ?>"><img src="" alt="">❌</a>
                         </td>
                     </tr>
                 <?php
                     }
                 }
-               ?> -->
-               <tr style="width: auto;">
-                        <td style="color: white; text-align: center;"><?php echo 1 ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "manhduc" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "123456789" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "Active" ?></td>
-                        <td style="text-align: center;">
-                            <a href="http://localhost/Quanlytotnghiep/quanlybangcap/sua/<?php echo $row['Tendangnhap'] ?>"><img src="" alt="">✏️</a>
-                            <a href="http://localhost/73dctt23_MVC/quanlytaikhoan/xoa/<?php echo $row['Tendangnhap'] ?>"><img src="" alt="">❌</a>
-                        </td>
-                </tr>
-                <tr style="width: auto;">
-                        <td style="color: white; text-align: center;"><?php echo 2 ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "dandan" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "987654321" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "Active" ?></td>
-                        <td style="text-align: center;">
-                            <a href="http://localhost/Quanlytotnghiep/quanlytaikhoan/sua/<?php echo $row['Tendangnhap'] ?>"><img src="" alt="">✏️</a>
-                            <a href="http://localhost/73dctt23_MVC/quanlytaikhoan/xoa/<?php echo $row['Tendangnhap'] ?>"><img src="" alt="">❌</a>
-                        </td>
-                </tr>
-                <tr style="width: auto;">
-                        <td style="color: white; text-align: center;"><?php echo 3 ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "mytra" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "123123" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "Inactive" ?></td>
-                        <td style="text-align: center;">
-                            <a href="http://localhost/Quanlytotnghiep/quanlytaikhoan/sua/<?php echo $row['Tendangnhap'] ?>"><img src="" alt="">✏️</a>
-                            <a href="http://localhost/73dctt23_MVC/quanlytaikhoan/xoa/<?php echo $row['Tendangnhap'] ?>"><img src="" alt="">❌</a>
-                        </td>
-                </tr>
+               ?>
             </tbody>
         </table>
     </form>
