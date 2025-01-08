@@ -13,7 +13,7 @@
             <label for="matkhau">Mật khẩu</label>
             <input type="text" id="matkhau" class="form-control" placeholder="Mật khẩu" name="txtMatkhau" value="<?php if(isset($data['matkhau'])) echo $data['matkhau'] ?>">
             <select name="txtVaitro" id="vaitro" class="form-control">
-                <option value="">---Chọn vai trò---</option>
+                <option value="" disabled selected>---Chọn vai trò---</option>
                 <option value="1" <?php if(isset($data['vaitro']) && $data['vaitro']=='1') echo 'selected' ?>>Sinh viên</option>
                 <option value="2" <?php if(isset($data['vaitro']) && $data['vaitro']=='2') echo 'selected' ?>>Nhân viên</option>
                 <option value="3" <?php if(isset($data['vaitro']) && $data['vaitro']=='3') echo 'selected' ?>>Admin</option>

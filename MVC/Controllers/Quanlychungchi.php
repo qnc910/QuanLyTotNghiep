@@ -45,10 +45,10 @@
         }
         function suadl(){
             if(isset($_POST['btnLuu'])){
-                $maCC=$_POST['txtTendangnhap'];
-                $tenCC=$_POST['txtMatkhau'];
-                $ngayCap=$_POST['txtVaitro'];
-                $loaiCC=$_POST['txtEmail'];
+                $maCC=$_POST['txtMaCC'];
+                $tenCC=$_POST['txtTenCC'];
+                $ngayCap=$_POST['txtNgayCap'];
+                $loaiCC=$_POST['txtLoaiCC'];
                 $kq=$this->qlcc->chungchi_update($maCC,$tenCC,$ngayCap,$loaiCC);
                 if($kq){
                     echo '<Script>alert("Sửa thành công!")</Script>';

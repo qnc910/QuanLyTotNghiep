@@ -94,7 +94,7 @@
                         <td><?php echo $row['diaChi'] ?></td>
                         <td>
                             <a href="http://localhost/Quanlytotnghiep/quanlytaikhoan/sua/<?php echo $row['tenTK'] ?>"><img src="" alt="">✏️</a>
-                            <a href="http://localhost/73dctt23_MVC/quanlytaikhoan/xoa/<?php echo $row['tenTK'] ?>"><img src="" alt="">❌</a>
+                            <a href="http://localhost/Quanlytotnghiep/quanlytaikhoan/xoa/<?php echo $row['tenTK'] ?>"><img src="" alt="">❌</a>
                         </td>
                     </tr>
                 <?php

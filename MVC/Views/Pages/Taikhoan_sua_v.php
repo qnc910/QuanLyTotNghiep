@@ -18,9 +18,9 @@
             <input type="text" id="matkhau" class="form-control" placeholder="Mật khẩu" name="txtMatkhau" value="<?php echo $row['matKhau'] ?>">
             <select name="txtVaitro" id="vaitro" class="form-control">
                 <option value="">---Chọn vai trò---</option>
-                <option value="1" <?php if ($data['vaiTro']=='1') echo 'selected' ?>>Sinh viên</option>
-                <option value="2" <?php if ($data['vaiTro']=='2') echo 'selected' ?>>Nhân viên</option>
-                <option value="3" <?php if ($data['vaiTro']=='3') echo 'selected' ?>>Admin</option>
+                <option value="1" <?php if ($row['vaiTro']=='1') echo 'selected' ?>>Sinh viên</option>
+                <option value="2" <?php if ($row['vaiTro']=='2') echo 'selected' ?>>Nhân viên</option>
+                <option value="3" <?php if ($row['vaiTro']=='3') echo 'selected' ?>>Admin</option>
             </select>
             <label for="myEmail">Email</label>
             <input type="email" id="myEmail" class="form-control" placeholder="Email" name="txtEmail" value="<?php echo $row['email'] ?>">

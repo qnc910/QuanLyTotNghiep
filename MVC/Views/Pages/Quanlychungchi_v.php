@@ -60,13 +60,13 @@
     <form method="post" action="http://localhost/Quanlytotnghiep/quanlychungchi/timkiem">
         <div class="form-inline mid">
             <label style="color: yellow; margin-right: 5px;">Mã chứng chỉ: </label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtMachungchi" value="<?php if(isset($data['Machungchi'])) echo $data['Mabang'] ?>"> </br>
+            <input style="width: 250px;" type="text" class="form-control" name="txtMaCC" value="<?php if(isset($data['macc'])) echo $data['macc'] ?>"> </br>
             <label style="color: yellow">Tên chứng chỉ: </label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtTenchungchi" value="<?php if(isset($data['Tenchungchi'])) echo $data['Masinhvien'] ?>"> &nbsp;
+            <input style="width: 250px;" type="text" class="form-control" name="txtTenCC" value="<?php if(isset($data['tencc'])) echo $data['tencc'] ?>"> &nbsp;
             <button type="submit" class="btn btn-success" name="btnTimkiem"><i class="fas fa-search search-icon"></i>Tìm kiếm</button>
         </div>
         <br>
-        <a href="http://localhost/Quanlytotnghiep/quanlychungchi/themmoi" class="button">Thêm</a>
+        <a href="http://localhost/Quanlytotnghiep/chungchi" class="button">Thêm</a>
         <br>
         <table class="table-header" style="overflow:auto;">
             <thead>
@@ -74,55 +74,31 @@
                     <th style="color: white">STT</th>
                     <th style="color: white">Mã chứng chỉ</th>
                     <th style="color: white">Tên chứng chỉ</th>
+                    <th style="color: white">Ngày cấp</th>
                     <th style="color: white">Loại chứng chỉ</th>
                 </tr>
             </thead>
             <tbody>
-               <!-- <?php
+               <?php
                 if(isset($data['dulieu'])&&mysqli_num_rows($data['dulieu'])>0){
                     $i=0;
                     while($row = mysqli_fetch_assoc($data['dulieu'])){
                 ?>
                     <tr style="width: auto;">
                         <td><?php echo ++$i ?></td>
-                        <td><?php echo $row['Machungchi'] ?></td>
-                        <td><?php echo $row['Tenchungchi'] ?></td>
-                        <td><?php echo $row['Loaichungchi'] ?></td>
+                        <td><?php echo $row['maCC'] ?></td>
+                        <td><?php echo $row['tenCC'] ?></td>
+                        <td><?php echo $row['ngayCap'] ?></td>
+                        <td><?php echo $row['loaiCC'] ?></td>
                         <td>
-                            <a href="http://localhost/Quanlytotnghiep/quanlybangcap/sua/<?php echo $row['Mabang'] ?>"><img src="" alt="">✏️</a>
+                            <a href="http://localhost/Quanlytotnghiep/quanlychungchi/sua/<?php echo $row['maCC'] ?>"><img src="" alt="">✏️</a>
+                            <a href="http://localhost/Quanlytotnghiep/quanlychungchi/xoa/<?php echo $row['maCC'] ?>"><img src="" alt="">❌</a>
                         </td>
                     </tr>
                 <?php
                     }
                 }
-               ?> -->
-               <tr style="width: auto;">
-                        <td style="color: white; text-align: center;"><?php echo 1 ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "TA01" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "IELTS" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "Tiếng Anh" ?></td>
-                        <td style="text-align: center;">
-                            <a href="http://localhost/Quanlytotnghiep/quanlybangcap/sua/<?php echo $row['Mabang'] ?>"><img src="" alt="">✏️</a>
-                        </td>
-                </tr>
-                <tr style="width: auto;">
-                        <td style="color: white; text-align: center;"><?php echo 2 ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "THVP01" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "MOS" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "Tin học" ?></td>
-                        <td style="text-align: center;">
-                            <a href="http://localhost/Quanlytotnghiep/quanlybangcap/sua/<?php echo $row['Mabang'] ?>"><img src="" alt="">✏️</a>
-                        </td>
-                </tr>
-                <tr style="width: auto;">
-                        <td style="color: white; text-align: center;"><?php echo 3 ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "TA02" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "TOEIC" ?></td>
-                        <td style="color: white; text-align: center;"><?php echo "Tiếng Anh" ?></td>
-                        <td style="text-align: center;">
-                            <a href="http://localhost/Quanlytotnghiep/quanlybangcap/sua/<?php echo $row['Mabang'] ?>"><img src="" alt="">✏️</a>
-                        </td>
-                </tr>
+               ?>
             </tbody>
         </table>
     </form>

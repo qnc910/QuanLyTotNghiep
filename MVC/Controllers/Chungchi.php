@@ -11,10 +11,10 @@
         }
         function themmoi(){
             if(isset($_POST['btnLuu'])){
-                $maCC=$_POST['txtTendangnhap'];
-                $tenCC=$_POST['txtMatkhau'];
-                $ngayCap=$_POST['txtVaitro'];
-                $loaiCC=$_POST['txtEmail'];
+                $maCC=$_POST['txtMaCC'];
+                $tenCC=$_POST['txtTenCC'];
+                $ngayCap=$_POST['txtNgayCap'];
+                $loaiCC=$_POST['txtLoaiCC'];
                 //Kiểm tra trùng mã chứng chỉ
                 $kq=$this->chungchi->checktrungTenDN($maCC);
                 $kq1=$this->chungchi->checktrungTenCC($tenCC);
