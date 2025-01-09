@@ -19,7 +19,7 @@
             <label for="ngayCap">Ngày cấp</label>
             <input type="date" id="ngayCap" class="form-control" placeholder="Ngày cấp" name="txtNgayCap" value="<?php echo $row['ngayCap'] ?>">
             <select name="txtLoaiCC" id="loaiCC" class="form-control">
-                <option value="">---Chọn loại chứng chỉ---</option>
+                <option value="" disabled>---Chọn loại chứng chỉ---</option>
                 <option value="Tiếng Anh" <?php if ($row['loaiCC']=='Tiếng Anh') echo 'selected' ?>>Tiếng Anh</option>
                 <option value="Tin Học" <?php if ($row['loaiCC']=='Tin Học') echo 'selected' ?>>Tin Học</option>
                 <option value="Khác" <?php if ($row['loaiCC']=='Khác') echo 'selected' ?>>Khác</option>
