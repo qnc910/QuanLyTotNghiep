@@ -18,7 +18,11 @@
 
     <!-- Our files -->
     <link rel="stylesheet" href="http://localhost/Quanlytotnghiep/Public/Css/style.css">
-    <link rel="stylesheet" href="http://localhost/Quanlytotnghiep/Public/Cssprogress.css">
+    <link rel="stylesheet" href="http://localhost/Quanlytotnghiep/Public/Css/progress.css">
+    <link rel="stylesheet" href="http://localhost/Quanlytotnghiep/Public/Css/bootstrap.min.css">
+    <script src="http://localhost/Quanlytotnghiep/Public/Js/bootstrap.min.js"></script>
+    <script src="http://localhost/Quanlytotnghiep/Public/Js/jquery-3.3.1.slim.min.js"></script>
+    <script src="http://localhost/Quanlytotnghiep/Public/Js/popper.min.js"></script>
 </head>
 
 <body>
@@ -48,9 +52,9 @@
                 <hr>
             </li>
             <li class="nav-item">
-                <a href="index.html" class="nav-link" onclick="logOutAdmin(); return true;">
+                <a href="http://localhost/Quanlytotnghiep/Dangnhap" class="nav-link" onclick="logOutAdmin(); return true;">
                     <i class="fa fa-arrow-left"></i>
-                    Đăng xuất (về Trang chủ)
+                    Đăng xuất
                 </a>
             </li>
         </ul>

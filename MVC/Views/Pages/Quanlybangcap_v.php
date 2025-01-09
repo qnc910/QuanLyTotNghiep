@@ -18,6 +18,11 @@
 </head>
 
 <style>
+    .mid{
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
     .add {
         padding: 5px 10px;
         border: 3px solid transparent;
@@ -38,10 +43,10 @@
 
 <body>
     <form method="post" action="http://localhost/Quanlytotnghiep/quanlybangcap/timkiem">
-        <div class="form-inline">
-            <label style="color: yellow">Mã bằng</label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtMabang" value="<?php if(isset($data['Mabang'])) echo $data['Mabang'] ?>">
-            <label style="color: yellow">Mã sinh viên</label>
+        <div class="form-inline mid">
+            <label style="color: yellow; margin-right: 5px;">Mã bằng: </label>
+            <input style="width: 250px;" type="text" class="form-control" name="txtMabang" value="<?php if(isset($data['Mabang'])) echo $data['Mabang'] ?>"> &nbsp;
+            <label style="color: yellow; margin-right: 5px;">Mã sinh viên: </label>
             <input style="width: 250px;" type="text" class="form-control" name="txtMasinhvien" value="<?php if(isset($data['Masinhvien'])) echo $data['Masinhvien'] ?>">
             <button type="submit" class="btn btn-success" name="btnTimkiem"><i class="fas fa-search search-icon"></i>Tìm kiếm</button>
         </div>
@@ -65,14 +70,14 @@
                     while($row = mysqli_fetch_assoc($data['dulieu'])){
                 ?>
                     <tr style="width: auto;">
-                        <td><?php echo ++$i ?></td>
-                        <td><?php echo $row['maBang'] ?></td>
-                        <td><?php echo $row['maSV'] ?></td>
-                        <td><?php echo $row['hinhthucDT'] ?></td>
-                        <td><?php echo $row['ngayCap'] ?></td>
-                        <td><?php echo $row['ngayKy'] ?></td>
-                        <td><?php echo $row['xepLoai'] ?></td>
-                        <td>
+                        <td style="color: white; text-align: center;"><?php echo ++$i ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['maBang'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['maSV'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['hinhthucDT'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['ngayCap'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['ngayKy'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['xepLoai'] ?></td>
+                        <td style="text-align: center;">
                             <a href="http://localhost/Quanlytotnghiep/quanlybangcap/sua/<?php echo $row['maBang'] ?>"><img src="" alt="">✏️</a>
                         </td>
                     </tr>

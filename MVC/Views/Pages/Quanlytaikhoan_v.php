@@ -6,7 +6,7 @@
     <title>Quản lý bằng cấp</title>
 
     <link rel="stylesheet" href="http://localhost/Quanlytotnghiep/Public/Css/style.css">
-    <link rel="stylesheet" href="http://localhost/Quanlytotnghiep/Public/Css/progressprogress.css">
+    <link rel="stylesheet" href="http://localhost/Quanlytotnghiep/Public/Css/progress.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Load font awesome icons -->
@@ -85,14 +85,14 @@
                     while($row = mysqli_fetch_assoc($data['dulieu'])){
                 ?>
                     <tr style="width: auto;">
-                        <td><?php echo ++$i ?></td>
-                        <td><?php echo $row['tenTK'] ?></td>
-                        <td><?php echo $row['matKhau'] ?></td>
-                        <td><?php echo $row['vaiTro'] ?></td>
-                        <td><?php echo $row['email'] ?></td>
-                        <td><?php echo $row['sdt'] ?></td>
-                        <td><?php echo $row['diaChi'] ?></td>
-                        <td>
+                        <td style="color: white; text-align: center;"><?php echo ++$i ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['tenTK'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['matKhau'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['vaiTro'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['email'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['sdt'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['diaChi'] ?></td>
+                        <td style="text-align: center;">
                             <a href="http://localhost/Quanlytotnghiep/quanlytaikhoan/sua/<?php echo $row['tenTK'] ?>"><img src="" alt="">✏️</a>
                             <a href="http://localhost/Quanlytotnghiep/quanlytaikhoan/xoa/<?php echo $row['tenTK'] ?>"><img src="" alt="">❌</a>
                         </td>

@@ -6,13 +6,14 @@
         }
         function Get_data(){
             $this->view('Masterlayout',[
-                'page'=>'Quanlybangcap_v'
+                'page'=>'Quanlybangcap_v',
+                'dulieu'=>$this->qlbc->timkiem('','')
             ]);
         }
         function timkiem(){
             if(isset($_POST['btnTimkiem'])){
-                $maBang=$_POST['txtMaCC'];
-                $maSv=$_POST['txtTenCC'];
+                $maBang=$_POST['txtMabang'];
+                $maSv=$_POST['txtMasinhvien'];
                 $dl=$this->qlbc->timkiem($maBang,$maSv);
                 //Gọi lại giao diện và truyền $dl ra
                 $this->view('Masterlayout',[

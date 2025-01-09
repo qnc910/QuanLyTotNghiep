@@ -19,7 +19,7 @@
 
 <style>
     .mid{
-        width: 50%;
+        width: 70%;
         margin: 0 auto;
         padding-top: 20px;
     }
@@ -60,8 +60,9 @@
     <form method="post" action="http://localhost/Quanlytotnghiep/quanlychungchi/timkiem">
         <div class="form-inline mid">
             <label style="color: yellow; margin-right: 5px;">Mã chứng chỉ: </label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtMaCC" value="<?php if(isset($data['macc'])) echo $data['macc'] ?>"> </br>
-            <label style="color: yellow">Tên chứng chỉ: </label>
+            <input style="width: 250px;" type="text" class="form-control" name="txtMaCC" value="<?php if(isset($data['macc'])) echo $data['macc'] ?>"> &nbsp;
+            </br>
+            <label style="color: yellow; margin-right: 5px;">Tên chứng chỉ: </label>
             <input style="width: 250px;" type="text" class="form-control" name="txtTenCC" value="<?php if(isset($data['tencc'])) echo $data['tencc'] ?>"> &nbsp;
             <button type="submit" class="btn btn-success" name="btnTimkiem"><i class="fas fa-search search-icon"></i>Tìm kiếm</button>
         </div>
@@ -85,12 +86,12 @@
                     while($row = mysqli_fetch_assoc($data['dulieu'])){
                 ?>
                     <tr style="width: auto;">
-                        <td><?php echo ++$i ?></td>
-                        <td><?php echo $row['maCC'] ?></td>
-                        <td><?php echo $row['tenCC'] ?></td>
-                        <td><?php echo $row['ngayCap'] ?></td>
-                        <td><?php echo $row['loaiCC'] ?></td>
-                        <td>
+                        <td style="color: white; text-align: center;"><?php echo ++$i ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['maCC'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['tenCC'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['ngayCap'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['loaiCC'] ?></td>
+                        <td style="text-align: center;">
                             <a href="http://localhost/Quanlytotnghiep/quanlychungchi/sua/<?php echo $row['maCC'] ?>"><img src="" alt="">✏️</a>
                             <a href="http://localhost/Quanlytotnghiep/quanlychungchi/xoa/<?php echo $row['maCC'] ?>"><img src="" alt="">❌</a>
                         </td>

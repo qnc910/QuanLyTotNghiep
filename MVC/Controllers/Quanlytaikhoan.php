@@ -6,7 +6,8 @@
         }
         function Get_data(){
             $this->view('Masterlayout',[
-                'page'=>'Quanlytaikhoan_v'
+                'page'=>'Quanlytaikhoan_v',
+                'dulieu'=>$this->qltk->timkiem('')
             ]);
         }
         function timkiem(){

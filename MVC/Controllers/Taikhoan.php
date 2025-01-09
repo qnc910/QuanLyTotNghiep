@@ -31,7 +31,7 @@
                     }
                 }
                 $this->view('Masterlayout',[
-                    'page'=>'Taikhoan_them_v',
+                    'page'=>'Quanlytaikhoan_v',
                     'tentk'=>$tentk,
                     'matkhau'=>$matkhau,
                     'vaitro'=>$vaitro,

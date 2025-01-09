@@ -6,7 +6,8 @@
         }
         function Get_data(){
             $this->view('Masterlayout',[
-                'page'=>'Quanlychungchi_v'
+                'page'=>'Quanlychungchi_v',
+                'dulieu'=>$this->qlcc->timkiem('','')
             ]);
         }
         function timkiem(){

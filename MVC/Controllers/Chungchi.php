@@ -16,7 +16,7 @@
                 $ngayCap=$_POST['txtNgayCap'];
                 $loaiCC=$_POST['txtLoaiCC'];
                 //Kiểm tra trùng mã chứng chỉ
-                $kq=$this->chungchi->checktrungTenDN($maCC);
+                $kq=$this->chungchi->checktrungMaCC($maCC);
                 $kq1=$this->chungchi->checktrungTenCC($tenCC);
                 if($kq){
                     echo '<Script>alert("Mã chứng chỉ đã tồn tại!")</Script>';
@@ -32,7 +32,7 @@
                     }
                 }
                 $this->view('Masterlayout',[
-                    'page'=>'Taikhoan_them_v',
+                    'page'=>'Quanlychungchi_v',
                     'macc'=>$maCC,
                     'tencc'=>$tenCC,
                     'ngaycap'=>$ngayCap,
