@@ -5,7 +5,7 @@ class Database_ql_taikhoan
     private static $hostname = "localhost";
     private static $username = "root";
     private static $password = "";
-    private static $database = "quanlytotnghiep";
+    private static $database = "quanlytaikhoan";
     protected static $conn = NULL;
 
     public static function Connect()

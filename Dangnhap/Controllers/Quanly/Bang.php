@@ -16,7 +16,7 @@ switch ($action) {
 			$gtTimkiem = $_POST['gtTimkiem'];
 			$list_sv = Sinhvien::Search($gtTimkiem);
 		}
-		require_once 'Views/masster/admin.php';
+		require_once 'Views/masster/Home_nv.php';
 		break;
 
 	// xử lý sinh viên
@@ -84,7 +84,7 @@ switch ($action) {
 		break;
 	case 'Admin':
 		$list_sv = Sinhvien::List();
-		require_once 'Views/masster/admin.php';
+		require_once 'Views/masster/Home_nv.php';
 		break;
 
 	default:

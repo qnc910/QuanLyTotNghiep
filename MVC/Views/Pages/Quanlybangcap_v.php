@@ -45,9 +45,9 @@
     <form method="post" action="http://localhost/Quanlytotnghiep/quanlybangcap/timkiem">
         <div class="form-inline mid">
             <label style="color: yellow; margin-right: 5px;">Mã bằng: </label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtMabang" value="<?php if(isset($data['Mabang'])) echo $data['Mabang'] ?>"> &nbsp;
+            <input style="width: 250px;" type="text" class="form-control" name="txtMabang" value="<?php if(isset($data['mabang'])) echo $data['mabang'] ?>"> &nbsp;
             <label style="color: yellow; margin-right: 5px;">Mã sinh viên: </label>
-            <input style="width: 250px;" type="text" class="form-control" name="txtMasinhvien" value="<?php if(isset($data['Masinhvien'])) echo $data['Masinhvien'] ?>">
+            <input style="width: 250px;" type="text" class="form-control" name="txtMasinhvien" value="<?php if(isset($data['masv'])) echo $data['masv'] ?>">
             <button type="submit" class="btn btn-success" name="btnTimkiem"><i class="fas fa-search search-icon"></i>Tìm kiếm</button>
         </div>
         <br>

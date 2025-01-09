@@ -41,9 +41,9 @@
             <label for="xepLoai" style="color: yellow;">Xếp loại</label>
             <select name="txtXepLoai" id="xepLoai" class="form-control">
                 <option value="" disabled>---Select---</option>
-                <option value="Xuất sắc" <?php if ($row['loaiCC']=='Xuất sắc') echo 'selected' ?>>Xuất sắc</option>
-                <option value="Giỏi" <?php if ($row['loaiCC']=='Giỏi') echo 'selected' ?>>Giỏi</option>
-                <option value="Khá" <?php if ($row['loaiCC']=='Khá') echo 'selected' ?>>Khá</option>
+                <option value="Xuất sắc" <?php if ($row['xepLoai']=='Xuất sắc') echo 'selected' ?>>Xuất sắc</option>
+                <option value="Giỏi" <?php if ($row['xepLoai']=='Giỏi') echo 'selected' ?>>Giỏi</option>
+                <option value="Khá" <?php if ($row['xepLoai']=='Khá') echo 'selected' ?>>Khá</option>
             </select>
             <?php        
                 }

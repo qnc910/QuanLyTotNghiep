@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 style="color: yellow;">Trang chủ</h1>
+    <h1 style="color: yellow;">Xin chào Admin</h1>
 </body>
 </html>

@@ -8,7 +8,7 @@
             return mysqli_query($this->con,$sql);
         }
         function timkiem($maBang,$maSV){
-            $sql= "SELECT btn.maBang, ctbtn.maSv, btn.hinhthucDT, btn.ngayCap, btn.ngayKy, ctbtn.xepLoai
+            $sql= "SELECT btn.maBang, ctbtn.maSv as 'maSV', btn.hinhthucDT, btn.ngayCap, btn.ngayKy, ctbtn.xepLoai
             FROM bangtotnghiep as btn
             JOIN chitietbangtotnghiep as ctbtn
             ON btn.maBang = ctbtn.maBang

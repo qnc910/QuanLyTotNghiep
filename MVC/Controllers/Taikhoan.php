@@ -13,7 +13,7 @@
             if(isset($_POST['btnLuu'])){
                 $tentk=$_POST['txtTendangnhap'];
                 $matkhau=$_POST['txtMatkhau'];
-                $vaitro=$_POST['txtVaitro'];
+                $vaitro=$_POST['txtVaiTro'];
                 $email=$_POST['txtEmail'];
                 $sdt=$_POST['txtSodienthoai'];
                 $diachi=$_POST['txtDiachi'];

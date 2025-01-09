@@ -9,33 +9,35 @@ else
 	$action = NULL;
 }
 switch ($action) {
-	case 'dang_ky':
-		if (isset($_POST['Dangky'])) {
-			$txtfirstName = $_POST['txtfirstName'];
-			$txtlastName = $_POST['txtlastName'];
-			$txtUsername = $_POST['txtUsername'];
-			$txtGender = $_POST['txtGender'];
-			$txtEmail = $_POST['txtEmail'];
-			$txtPhonenb = $_POST['txtPhone'];
-			$txtAddress = $_POST['txtAddress'];
-			$txtPassword = md5($_POST['txtPassword']);
-			$txtCfPassword = md5($_POST['txtCfPassword']);
-
-			$txtHote = $txtfirstName." ".$txtlastName;
-
-			if ($txtPassword == $txtCfPassword) {
-				if (Dangnhap::ADD($txtHote,$txtUsername,$txtPassword,$txtGender,$txtEmail,$txtAddress,$txtPhonenb)) {
-					header('location:index.php?controllers=login');
-				}
-			}
-			else
-			{
-				$thatbai = "<p style ='color:red'>* Đăng ký Thất bại do mặt khẩu nhập lại không khớt.!</p>";
-			}
-		}
-		require_once 'Views/register.php';
-		break;
-	
+		case 'dang_ky':
+			if (isset($_POST['Dangky'])) {
+			 $txtfirstName = $_POST['txtfirstName'];
+			 $txtlastName = $_POST['txtlastName'];
+			 $txtUsername = $_POST['txtUsername'];
+			 $txtGender = $_POST['txtGender'];
+			 $txtEmail = $_POST['txtEmail'];
+			 $txtPhonenb = $_POST['txtPhone'];
+			 $txtAddress = $_POST['txtAddress'];
+			 $txtPassword = md5($_POST['txtPassword']);
+			 $txtCfPassword = md5($_POST['txtCfPassword']);
+			 $txtRole = $_POST['txtRole'];
+		  
+			 $txtHote = $txtfirstName." ".$txtlastName;
+		  
+			 if ($txtPassword == $txtCfPassword) {
+			  if (Dangnhap::ADD($txtHote,$txtUsername,$txtPassword,$txtGender,$txtEmail,$txtAddress,$txtPhonenb,$txtRole)) {
+			   header('location:index.php?controllers=login');
+			  }
+			 }
+			 else
+			 {
+			  $thatbai = "<p style ='color:red'>* Đăng ký Thất bại do mặt khẩu nhập lại không khớt.!</p>";
+			 }
+			
+		}	
+			require_once 'Views/register.php';
+			break;
+		
 	case 'cai_dat':
 		if (isset($_GET['username'])) {
 			$username = $_GET['username'];
@@ -112,32 +114,56 @@ switch ($action) {
 
 
 	case 'Admin':
-    if (isset($_POST['login'])) {
-        $text_username = $_POST['username'];
-        $text_password = $_POST['password'];
-
-        // Gọi phương thức kiểm tra đăng nhập
-        $list_user = Dangnhap::Login($text_username, md5($text_password)); // Nếu cần giữ MD5.
-
-        if ($list_user > 0) {
-            // Đăng nhập thành công
-            $_SESSION["username"] = $text_username;
-            header('Location: index.php?controllers=quanly&action=Admin');
-            exit;
-        } else {
-            // Đăng nhập thất bại
-            $thatbai = "<p style ='color:red'>* Tên đăng nhập hoặc Mật khẩu không đúng!</p>";
-            require_once 'Views/login.php';
-        }
-    }
-    break;
-		
-	case 'logout':
-		require_once 'Views/logout.php';
+		if (isset($_POST['login'])) {
+			$text_username = $_POST['username'];
+			$text_password = $_POST['password'];
+	
+			// Gọi phương thức kiểm tra đăng nhập
+			$list_user = Dangnhap::Login($text_username, md5($text_password)); // Kiểm tra tài khoản với mật khẩu MD5
+	
+			if (!empty($list_user)) {
+				// Đăng nhập thành công, kiểm tra vai trò
+				$user = $list_user[0]; // Giả sử `Login()` trả về danh sách người dùng, lấy người đầu tiên
+				$role = $user['role']; // Lấy giá trị vai trò từ kết quả database
+	
+				// Lưu thông tin vào session
+				$_SESSION["username"] = $text_username;
+				$_SESSION["role"] = $role;
+	
+				// Điều hướng dựa trên vai trò
+				switch ($role) {
+						case 'sinhvien':
+							$_SESSION["username"] = $text_username;
+            				header('Location: index.php?controllers=quanly&action=Admin');
+            				exit;
+	
+						case 'admin':
+							header('Location: http://localhost/Quanlytotnghiep/home_admin');
+							exit;
+			
+						case 'nhanvien':
+							header('Location: http://localhost/Quanlytotnghiep/home');
+							exit;
+						default:
+							echo "<p style='color:red;'>Chức vụ không hợp lệ!</p>";
+							require_once 'Views/login.php';
+							break;
+				}
+			} else {
+				// Đăng nhập thất bại
+				$thatbai = "<p style ='color:red'>* Tên đăng nhập hoặc Mật khẩu không đúng!</p>";
+				require_once 'Views/login.php';
+			}
+		}
 		break;
 	
-	default:
-		require_once 'Views/login.php';
-		break;
+		case 'logout':
+			require_once 'Views/logout.php';
+			break;
+		
+		default:
+			require_once 'Views/login.php';
+			break;
 }
  ?>
+

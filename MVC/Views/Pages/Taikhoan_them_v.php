@@ -38,11 +38,11 @@
             <label for="matkhau" style="color: yellow;">Mật khẩu</label>
             <input type="text" id="matkhau" class="form-control" placeholder="Mật khẩu" name="txtMatkhau" value="<?php if(isset($data['matkhau'])) echo $data['matkhau'] ?>">
             <label for="vaitro" style="color: yellow;">Vai trò</label>
-            <select name="txtVaitro" id="vaitro" class="form-control">
+            <select name="txtVaiTro" id="vaitro" class="form-control">
                 <option value="" disabled selected>---Chọn vai trò---</option>
-                <option value="1" <?php if(isset($data['vaitro']) && $data['vaitro']=='1') echo 'selected' ?>>Sinh viên</option>
-                <option value="2" <?php if(isset($data['vaitro']) && $data['vaitro']=='2') echo 'selected' ?>>Nhân viên</option>
-                <option value="3" <?php if(isset($data['vaitro']) && $data['vaitro']=='3') echo 'selected' ?>>Admin</option>
+                <option value="Sinh Viên" <?php if(isset($data['vaitro']) && $data['vaitro']=='Sinh Viên') echo 'selected' ?>>Sinh Viên</option>
+                <option value="Nhân viên" <?php if(isset($data['vaitro']) && $data['vaitro']=='Nhân viên') echo 'selected' ?>>Nhân viên</option>
+                <option value="Admin" <?php if(isset($data['vaitro']) && $data['vaitro']=='Admin') echo 'selected' ?>>Admin</option>
             </select>
             <label for="myEmail" style="color: yellow;">Email</label>
             <input type="email" id="myEmail" class="form-control" placeholder="Email" name="txtEmail" value="<?php if(isset($data['email'])) echo $data['email'] ?>">

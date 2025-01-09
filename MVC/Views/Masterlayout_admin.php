@@ -35,16 +35,11 @@
         <ul class="nav">
             <li class="nav-title">MENU</li>
             <li class="nav-item"><a class="nav-link <?php echo ($data['page'] == 'home_v') ? 'active' : ''; ?>"
-                    href="http://localhost/Quanlytotnghiep/home"><i class="fa fa-home"></i>
+                    href="http://localhost/Quanlytotnghiep/home_admin"><i class="fa fa-home"></i>
                     Trang Chủ</a></li>
             <li class="nav-item"><a class="nav-link <?php echo ($data['page'] == 'quanlybangcap_v') ? 'active' : ''; ?>"
-                    href="http://localhost/Quanlytotnghiep/quanlybangcap"><i class="fa fa-th-large"></i>Quản lý bằng tốt nghiệp</a>
+                    href="http://localhost/Quanlytotnghiep/quanlytaikhoan"><i class="fa fa-th-large"></i>Quản lý tài khoản</a>
             </li>
-            <li class="nav-item"><a class="nav-link <?php echo ($data['page'] == 'quanlychungchi_v') ? 'active' : ''; ?>"
-                    href="http://localhost/Quanlytotnghiep/quanlychungchi"><i class="fa fa-file-text-o"></i>Quản lý chứng chỉ</a></li>
-            <li class="nav-item"><a class="nav-link <?php echo ($data['page'] == 'tracuu_vv') ? 'active' : ''; ?>"
-                    href="http://localhost/Quanlytotnghiep/tracuu" style="text-decoration:none;"><i
-                        class="fa fa-upload"></i> Tra cứu</a></li>
             <li class="nav-item">
                 <hr>
             </li>

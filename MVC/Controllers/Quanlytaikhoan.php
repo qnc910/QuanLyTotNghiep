@@ -5,7 +5,7 @@
             $this->qltk=$this->model('Quanlytaikhoan_m');
         }
         function Get_data(){
-            $this->view('Masterlayout',[
+            $this->view('Masterlayout_admin',[
                 'page'=>'Quanlytaikhoan_v',
                 'dulieu'=>$this->qltk->timkiem('')
             ]);
@@ -15,7 +15,7 @@
                 $tentk=$_POST['txtTendangnhap'];
                 $dl=$this->qltk->timkiem($tentk);
                 //Gọi lại giao diện và truyền $dl ra
-                $this->view('Masterlayout',[
+                $this->view('Masterlayout_admin',[
                     'page'=>'Quanlytaikhoan_v',
                     'dulieu'=>$dl,
                     'tentk'=>$tentk
@@ -30,13 +30,13 @@
                 echo '<script>alert("Xóa thất bại!")</script>';
             }
             $dl=$this->qltk->timkiem('');
-            $this->view('Masterlayout',[
+            $this->view('Masterlayout_admin',[
                 'page'=>'Quanlytaikhoan_v',
                 'dulieu'=>$dl
             ]);
         }
         function sua($tentk){
-            $this->view('Masterlayout',[
+            $this->view('Masterlayout_admin',[
                 'page'=>'Taikhoan_sua_v',
                 'dulieu'=>$this->qltk->timkiem($tentk)
             ]);
@@ -55,7 +55,7 @@
                 }else{
                     echo '<Script>alert("Sửa thất bại!")</Script>';
                 }
-                $this->view('Masterlayout',[
+                $this->view('Masterlayout_admin',[
                     'page'=>'Quanlytaikhoan_v',
                     'dulieu'=>$this->qltk->timkiem('')
                 ]);
