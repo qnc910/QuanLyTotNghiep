@@ -42,6 +42,8 @@
             </li>
             <li class="nav-item"><a class="nav-link <?php echo ($data['page'] == 'quanlychungchi_v') ? 'active' : ''; ?>"
                     href="http://localhost/Quanlytotnghiep/quanlychungchi"><i class="fa fa-file-text-o"></i>Quản lý chứng chỉ</a></li>
+                    <li class="nav-item"><a class="nav-link <?php echo ($data['page'] == 'quanlychungchi_v') ? 'active' : ''; ?>"
+                    href="http://localhost/Quanlytotnghiep/Dangnhap/views/masster/Home_nv.php"><i class="fa fa-file-text-o"></i>Quản lý sinh viên</a></li>
             <li class="nav-item"><a class="nav-link <?php echo ($data['page'] == 'tracuu_vv') ? 'active' : ''; ?>"
                     href="http://localhost/Quanlytotnghiep/tracuu" style="text-decoration:none;"><i
                         class="fa fa-upload"></i> Tra cứu</a></li>

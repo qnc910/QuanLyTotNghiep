@@ -62,7 +62,7 @@
             <label style="color: yellow; margin-right: 5px;">Mã chứng chỉ: </label>
             <input style="width: 250px;" type="text" class="form-control" name="txtMaCC" value="<?php if(isset($data['macc'])) echo $data['macc'] ?>"> &nbsp;
             </br>
-            <label style="color: yellow; margin-right: 5px;">Tên chứng chỉ: </label>
+            <label style="color: yellow; margin-right: 5px;">Mã sinh viên: </label>
             <input style="width: 250px;" type="text" class="form-control" name="txtTenCC" value="<?php if(isset($data['tencc'])) echo $data['tencc'] ?>"> &nbsp;
             <button type="submit" class="btn btn-success" name="btnTimkiem"><i class="fas fa-search search-icon"></i>Tìm kiếm</button>
         </div>
@@ -75,6 +75,7 @@
                     <th style="color: white">STT</th>
                     <th style="color: white">Mã chứng chỉ</th>
                     <th style="color: white">Tên chứng chỉ</th>
+                    <th style="color: white">Mã sinh viên</th>
                     <th style="color: white">Ngày cấp</th>
                     <th style="color: white">Loại chứng chỉ</th>
                 </tr>
@@ -89,6 +90,7 @@
                         <td style="color: white; text-align: center;"><?php echo ++$i ?></td>
                         <td style="color: white; text-align: center;"><?php echo $row['maCC'] ?></td>
                         <td style="color: white; text-align: center;"><?php echo $row['tenCC'] ?></td>
+                        <td style="color: white; text-align: center;"><?php echo $row['maSV'] ?></td>
                         <td style="color: white; text-align: center;"><?php echo $row['ngayCap'] ?></td>
                         <td style="color: white; text-align: center;"><?php echo $row['loaiCC'] ?></td>
                         <td style="text-align: center;">

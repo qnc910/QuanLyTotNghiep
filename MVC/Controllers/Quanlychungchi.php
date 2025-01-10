@@ -48,6 +48,7 @@
             if(isset($_POST['btnLuu'])){
                 $maCC=$_POST['txtMaCC'];
                 $tenCC=$_POST['txtTenCC'];
+                $tenCC=$_POST['txtTenCC'];
                 $ngayCap=$_POST['txtNgayCap'];
                 $loaiCC=$_POST['txtLoaiCC'];
                 $kq=$this->qlcc->chungchi_update($maCC,$tenCC,$ngayCap,$loaiCC);

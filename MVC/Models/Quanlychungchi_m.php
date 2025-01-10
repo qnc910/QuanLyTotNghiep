@@ -22,8 +22,12 @@
             }
             return $kq;
         }
-        function timkiem($maCC,$tenCC): bool|mysqli_result{
-            $sql= "SELECT * FROM chungchi WHERE maCC LIKE '%$maCC%' AND tenCC LIKE '%$tenCC%'";
+        function timkiem($maCC,$maSV): bool|mysqli_result{
+            $sql= "SELECT cc.maCC, cc.tenCC, ctcc.maSV as 'maSV', cc.ngayCap, cc.loaiCC
+            FROM chungchi as cc 
+            JOIN chitietchungchi as ctcc
+            ON cc.maCC = ctcc.maCC
+            WHERE cc.maCC LIKE '%$maCC%' AND ctcc.maSV LIKE '%$maSV%';";
             return mysqli_query($this->con,$sql);
         }
         function chungchi_delete($maCC){

@@ -40,6 +40,8 @@
             <input type="text" id = "maCC" class="form-control dd1" placeholder="Mã chứng chỉ" name="txtMaCC" value="<?php echo $row['maCC'] ?>">
             <label for="tenCC" style="color: yellow;">Tên chứng chỉ</label>
             <input type="text" id="tenCC" class="form-control" placeholder="Tên chứng chỉ" name="txtTenCC" value="<?php echo $row['tenCC'] ?>">
+            <label for="maSV" style="color: yellow;">Mã sinh viên</label>
+            <input type="text" id="maSV" class="form-control" placeholder="Tên chứng chỉ" name="txtMaSV" value="<?php echo $row['maSV'] ?>" disabled>
             <label for="ngayCap" style="color: yellow;">Ngày cấp</label>
             <input type="date" id="ngayCap" class="form-control" placeholder="Ngày cấp" name="txtNgayCap" value="<?php echo $row['ngayCap'] ?>">
             <label for="loaiCC" style="color: yellow;">Chứng chỉ</label>
